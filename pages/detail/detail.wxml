@@ -1,0 +1,33 @@
+<scroll-view scroll-y="true" class="container">
+	<swiper class="product-img" indicator-dots="true" autoplay="true" interval="3000" duration="300">
+		<block wx:for="{{productDetail.img}}" wx:key="unique">
+		    <swiper-item>
+		      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+		    </swiper-item>
+		</block>
+	</swiper>
+	<view class="product-intro">
+		<view class="title">{{productDetail.brandName}}{{productDetail.name}}</view>
+		<text class="discount" wx:if="{{discount>0 &&discount<10}}">{{discount}}折</text>
+		<view class="price-box">
+			<text class="lv1">¥{{productDetail.price}}</text>
+			<text class="lv2">¥{{productDetail.originPrice}}</text>
+		</view>
+		<view class="reward">购买最高可返{{rewardPoint}}蜜豆</view>
+		<view class="product-description">
+			<image class="sloganicon" src="../../images/css-check.png"></image>
+			<view class="slogan">{{productDetail.slogan}}</view>
+		</view>
+		<view class="comment">购买过的小伙伴都这么说({{productDetail.reviewCount}})</view>
+	</view>
+	<view class="img-intro">
+		<block wx:for="{{imgs}}" wx:key="unique">
+			<image style="width:{{imgSize[index].imageWidth}}px;height:{{imgSize[index].imageheight}}px" bindload="cusImageLoad" data-index="{{index}}" mode="aspectFill" src="{{item}}"></image>
+		</block>
+	</view>
+</scroll-view>
+<view class="add-shipping-cart">
+	<image class="wishlist" src="../../images/heart@2x.png"></image>
+	<image class="cart" src="../../images/cart@2x.png"></image>
+	<view class="addcart" data-productinfo="{{productDetail.productId}}" bindtap="goCart">加入购物车</view>
+</view>

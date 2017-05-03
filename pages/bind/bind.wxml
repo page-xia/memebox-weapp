@@ -1,0 +1,7 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="section">
+    <view>bind memebox account</view>
+    <input class="bindphone" name="input" placeholder="please input your phone" />
+  </view>
+  <button formType="submit" class="btn-bind">submit</button>
+</form>

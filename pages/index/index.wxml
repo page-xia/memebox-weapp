@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view class="container">
+	<view class="bannertop">
+			<view wx:for="{{bannerInfo}}" wx:for-item="banner" wx:key="unique">
+				<view>{{banner.banner_title}}</view>
+				<!-- <image src="{{banner.banner_image}}"></image> -->
+			</view>
+	</view>
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>

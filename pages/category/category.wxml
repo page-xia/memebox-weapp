@@ -1,0 +1,17 @@
+<scroll-view scroll-y="true" class="container">
+	<image class="topbanner" src="../../images/top.png"></image>
+	<block wx:for="{{categoryList}}" wx:for-index="idx" wx:for-item="product" wx:key="unique">
+		<view class="product" id="p {{product.sku}}">
+			<view id="tem" data-productid="{{product.productId}}" bindtap="goDetail">
+				<image src="{{product.imgUrl}}"></image>
+				<view class="productdetail">
+					<view class="title">{{product.brandName}}{{product.name}}</view>
+					<text class="discount" wx:if="{{product.discount != 10}}">{{product.discount}}折</text>
+					<view class="lv1">¥{{product.price}}</view>
+					<view class="lv2">¥{{product.originPrice}}</view>
+				</view>
+			</view>
+			<image class="addcart" src="../../images/shoppingCart.png" bindtap="addcart"></image>
+		</view>
+	</block>
+</scroll-view>

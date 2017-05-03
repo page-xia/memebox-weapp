@@ -1,0 +1,74 @@
+.container{
+	border-top: 1px solid #e0e0e0;
+}
+.container image{
+	width: 100%;
+	height: 250rpx;
+}
+.product{
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 250rpx;
+}
+.product image{
+	position: relative;
+  float: left;
+  width: 230rpx;
+  height: 230rpx;
+  margin: 10rpx;
+}
+.product .productdetail{
+	float: right;
+  margin-right: 10rpx;
+  height: 248rpx;
+  width: 60%;
+  border-bottom: 2rpx solid #e0e0e0;
+}
+.product .addcart{
+	width: 60rpx;
+	height: 60rpx;
+	position: absolute;
+	bottom: 20rpx;
+	right: 40rpx;
+}
+.productdetail .title{
+	font-size: 28rpx;
+	padding: 30rpx 20rpx 0 0;
+	overflow: hidden;
+  	display: -webkit-box;
+  	-webkit-line-clamp: 2;
+  	-webkit-box-orient: vertical;
+  	word-break: break-all;
+  	line-height: 36rpx;
+  	height: 72rpx;
+}
+.productdetail .discount{
+	background: #ffe3f2;
+	color: #ff75c0;
+	font-size: 24rpx;
+	height: 32rpx;
+	line-height: 32rpx;
+	padding: 4rpx 10rpx;
+	border-radius: 4rpx;
+}
+.productdetail .lv1{
+	position: absolute;
+	bottom: 20rpx;
+	font-size: 40rpx;
+	color: #ff5073;
+}
+.productdetail .lv2{
+	position: absolute;
+	bottom: 20rpx;
+	margin-left: 160rpx;
+	font-size: 28rpx;
+	line-height: 40rpx;
+	height: 40rpx;
+	color: #999;
+	text-decoration: line-through;
+}
+#tem{
+	position: relative;
+	height: 250rpx;
+}

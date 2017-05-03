@@ -1,0 +1,1 @@
+<view>u have added product: id-{{productInfo.productinfo}} into your cart~</view>
